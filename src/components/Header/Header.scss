@@ -1,0 +1,300 @@
+@import '../../assets/scss/mixins.scss';
+@import '../../assets/scss/variable.scss';
+
+
+.header {
+
+    display: flex;
+    align-items: center;
+    background-color: $black;
+    color: $white;
+    position: relative;
+    flex-shrink: 0;
+    @include adaptive-padding(10, 15, 20, 60);
+    gap: 20px;
+    &__burger {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-icon {
+            width: 18px;
+                height: 1px;
+                background-color: $green-light;
+                border-radius: 1px;
+                position: relative;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            
+                &::after,
+                &::before {
+                    content: "";
+                    background-color: $green-light;
+                    height: 1px;
+                    width: 18px;
+                    position: absolute;
+                    transition: all 0.3s ease;
+                }
+            
+                &::after {
+                    top: 6px;
+                }
+            
+                &::before {
+                    top: -6px;
+                }
+        }
+    }
+
+    &__manager {
+        display: none;
+
+        &-avatar {
+            position: relative;
+        }
+        &-link .icon {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &__language {
+        display: none;
+        margin-right: 20px;
+
+        img {
+            width: 24px;
+            height: 16px;
+        }
+    }
+
+    &__balance {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        &-coin {
+            stroke: $gold;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            padding: 2px;
+
+            & svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-line {
+            width: 1px;
+            height: 16px;
+            opacity: 40%;
+            background-color: #D9D9D9;
+        }
+
+        &-gold {
+            color: $gold;
+        }
+
+        &-greenlight {
+            color: $green-light;
+        }
+    }
+
+    &__notice {
+        position: relative;
+        display: flex;
+        stroke: #C3C5C0;
+        padding: 2px 3px;
+        height: 24px;
+        width: 24px;
+
+        & svg {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        & .header__notice-circle {
+            border-radius: 50%;
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            top: 2px;
+            right: 2px;
+        }
+    }
+
+    &__user {
+        &-info {
+            display: flex;
+            align-items: center;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        &-name {
+            display: none;
+            flex-direction: column;
+        }
+
+        &-panel {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 20px;
+            flex: 1;
+        }
+
+
+        &-avatar {
+            margin-right: 8px;
+            position: relative;
+        }
+
+        &-arow {
+            width: 16px;
+            height: 16px;
+            display: flex;
+            stroke: #C3C5C0;
+        }
+    }
+
+    &__menu {
+        nav {
+            ul {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    margin-right: 20px;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        &__manager {
+            display: flex;
+            gap: 16px;
+            flex-direction: row;
+            align-items: center;
+
+            &-avatar {
+                position: relative;
+
+                & .header__user-circle {
+                    border-radius: 50%;
+                    width: 5px;
+                    height: 5px;
+                    position: absolute;
+                    bottom: 2px;
+                    right: 2px;
+                    border: 1px solid $black;
+                }
+            }
+
+            &-name {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+
+                span:first-of-type {
+                    font-weight: 400px;
+                    font-size: 14px;
+                    color: #DEDFDC;
+                    line-height: 21px;
+                }
+
+                span:nth-of-type(2) {
+                    font-weight: 600px;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    line-height: 24px;
+                    /* Пример: красный цвет */
+                }
+            }
+
+        }
+
+        &__burger-icon {
+            display: none;
+        }
+                 &__language {
+                     display: flex;
+                    align-items: center;
+                    gap: 5px;
+                     img {
+                        width: 24px;
+                            height: 24px;
+                            border-radius: 50%;
+                     }
+                 }
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .circle {
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        bottom: 5px;
+        right: 2px;
+        border: 1px solid $black;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    .header {
+        &__balance {
+                margin: 0;
+        
+                &-coin {
+                    stroke: $gold;
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    padding: 2px;
+        
+                    & svg {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+        
+                &-line {
+                    width: 1px;
+                    height: 16px;
+                    opacity: 40%;
+                    background-color: #D9D9D9;
+                }
+        
+                &-gold {
+                    color: $gold;
+                }
+        
+                &-greenlight {
+                    color: $green-light;
+                }
+            }
+    }
+}

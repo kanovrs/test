@@ -1,0 +1,94 @@
+@import '../../assets/scss/variable.scss';
+
+.offerHorizhontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 8px;
+    gap: 16px;
+    border-bottom: 1px solid #DEDFDC;
+    &__img {
+        width: 40px;
+        border-radius: 50%;
+    }
+    &__arow {
+        stroke: $gray-dark;
+    }
+    &__txt {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        font-size: 14px;
+            line-height: 21px;
+            font-weight: 400;
+    }
+        &__name {
+            color: $black;
+        }
+    
+        &__category {
+            color: $gray-dark;
+            font-size: 12px;
+                line-height: 18px;
+
+        }
+    &__flags {
+        display: flex;
+        gap: 8px;
+        font-size: 12px;
+        line-height: 18px;
+        &-quantity {
+                padding: 0 5px;
+                background-color: #DEDFDC;
+                border-radius: 4px;
+            }
+    }
+    &__details {
+        background-color: #F7F8F5;
+         overflow-x: auto;
+        &-paymant {
+            display: flex;
+        }
+    }
+    
+}
+
+.offerHorizhontal__details-block {
+    width: 100%;
+    overflow: auto;
+}
+
+// .offerHorizhontal__details-info {
+//     display: grid;
+// grid-template-columns: 150px 50px 120px;
+//     /* 6 столбцов для заголовков и данных */
+//     gap: 10px;
+//     /* Отступы между ячейками */
+// }
+
+
+.offerHorizhontal__details-offers {
+    font-size: 12px;
+    display: grid;
+                grid-template-columns: 150px 50px 120px 50px 41px 104px 20px; 
+    /* 6 столбцов, чтобы соответствовать заголовкам */
+    gap: 10px;
+    /* Отступы между ячейками */
+}
+
+.offerHorizhontal__details-offer {
+    display: contents;
+    /* Позволяет элементам внутри использовать сетку родителя */
+}
+
+.offerHorizhontal__details-text p,
+.offerHorizhontal__details-offers p {
+    margin: 0;
+    padding: 5px;
+    /* Добавьте немного отступов */
+    background-color: #f9f9f9;
+    /* Задайте цвет фона для данных, если необходимо */
+        font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+}

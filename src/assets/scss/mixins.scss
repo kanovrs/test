@@ -1,0 +1,4 @@
+@mixin adaptive-padding($min-padding-vertical, $max-padding-vertical, $min-padding-horizontal, $max-padding-horizontal, $min-width: 390, $max-width: 1440) {
+    
+            padding: clamp(#{$min-padding-vertical}px, calc(#{$min-padding-vertical}px + (#{$max-padding-vertical} - #{$min-padding-vertical}) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width}))), #{$max-padding-vertical}px) clamp(#{$min-padding-horizontal}px, calc(#{$min-padding-horizontal}px + (#{$max-padding-horizontal} - #{$min-padding-horizontal}) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width}))), #{$max-padding-horizontal}px);
+}

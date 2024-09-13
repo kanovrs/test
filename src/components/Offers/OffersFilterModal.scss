@@ -1,0 +1,203 @@
+.modal {
+    width: 90vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #F7F8F5;
+    top: 0;
+    right: 0;
+    padding: 36px 16px;
+    &__header {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        & .btn:nth-of-type(1) {
+                background-color: #ffffff;
+                color: #121311;
+                padding: 10px 16px;
+                flex: 0;
+                margin-right: auto;
+        }
+        & .sidebar__close {
+&::after,
+    &::before {
+        background-color: #121311;
+    }
+        }
+       
+    }
+   
+}
+
+.filters {
+    .filter {
+        margin-bottom: 20px;
+        .toggle-wraper {
+                display: flex;
+                justify-content: space-between;
+            }
+        
+        label {
+            display: block;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .multi-select {
+            display: flex;
+            flex-wrap: wrap;
+
+            label {
+                background-color: #f0f0f0;
+                border-radius: 20px;
+                padding: 5px 10px;
+                font-size: 14px;
+                margin: 5px;
+                cursor: pointer;
+
+                input[type="checkbox"] {
+                    display: none;
+                }
+
+                &:has(input:checked) {
+                    background-color: #333;
+                    color: #fff;
+                }
+            }
+        }
+
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+
+            input[type="checkbox"] {
+                margin-left: auto;
+                appearance: none;
+                width: 40px;
+                height: 20px;
+                background-color: #ccc;
+                border-radius: 20px;
+                position: relative;
+                cursor: pointer;
+
+                &:checked {
+                    background-color: #333;
+                }
+
+                &:checked::before {
+                    left: 20px;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    width: 16px;
+                    height: 16px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    transition: left 0.3s ease;
+                }
+            }
+        }
+    }
+
+    .clear-btn,
+    .apply-btn {
+        width: 100%;
+        padding: 10px 15px;
+        border-radius: 20px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #555;
+        }
+
+        &.clear-btn {
+            background-color: transparent;
+            color: #333;
+            border: 1px solid #333;
+        }
+
+        &.apply-btn {
+            margin-top: 10px;
+        }
+    }
+}
+
+
+
+
+.toggle-container {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 20px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    
+
+    .toggle-switch {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        border-radius: 20px;
+        transition: 0.4s;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+    }
+
+    input:checked+.toggle-switch {
+        background-color: #00b33c;
+
+        &::before {
+            transform: translateX(20px);
+        }
+    }
+}
+
+.search {
+    position: relative;
+    & svg {
+        position: absolute;
+        top: 13px;
+        right: 20px;
+    }
+}

@@ -1,0 +1,53 @@
+.statistics {
+    display: flex;
+    flex-wrap: wrap;
+    &__title {
+        margin-bottom: 20px;
+    }
+ 
+    &__chart {
+        height: 300px;
+        width: 358px ;
+        overflow: hidden;
+    }
+    
+
+    &__wraper {
+        background-color: #F7F8F5;
+        padding: 18px;
+        width: 100%;
+    }
+    .chart-container {
+        margin-bottom: 30px;
+        display: flex;
+    }
+    &__chart-legend {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+        &__chart-block {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        &__chart-num {
+            font-weight: 600;
+            font-size: 20px;
+        }
+        &__chart-percent {
+            font-weight: 400;
+            font-size: 12px;
+            padding: 3px 4px;
+            background-color: #4DDA8E;
+            border-radius: 5px;
+            color: white;
+        }
+        &__chart-txt {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+        }
+    
+}

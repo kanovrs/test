@@ -1,0 +1,106 @@
+// .dashboard {
+//   display: flex;
+//   height: 100vh;
+
+//   .sidebar {
+//     width: 250px;
+//     background-color: #1A1A1A;
+//     color: #FFF;
+//     padding: 20px;
+
+//     .logo {
+//       font-size: 24px;
+//       font-weight: bold;
+//       margin-bottom: 30px;
+//     }
+
+//     .menu {
+//       ul {
+//         list-style: none;
+//         padding: 0;
+
+//         li {
+//           margin: 15px 0;
+//           cursor: pointer;
+//           &:hover {
+//             color: #28a745;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .main-content {
+//     flex: 1;
+//     background-color: #F7F7F7;
+//     padding: 20px;
+
+//     .header {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       background-color: #FFF;
+//       padding: 20px;
+//       margin-bottom: 20px;
+//       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+//       .header-left {
+//         h1 {
+//           margin: 0;
+//         }
+//         .manager-info {
+//           margin-top: 5px;
+//           color: #888;
+//         }
+//       }
+
+//       .header-right {
+//         display: flex;
+//         align-items: center;
+
+//         .balance {
+//           margin-right: 20px;
+//           font-weight: bold;
+//         }
+
+//         .profile {
+//           font-weight: bold;
+//         }
+//       }
+//     }
+
+//     .statistics {
+//       background-color: #FFF;
+//       padding: 20px;
+//       margin-bottom: 20px;
+//       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+//       h2 {
+//         margin-top: 0;
+//       }
+//     }
+
+//     .offers {
+//       background-color: #FFF;
+//       padding: 20px;
+//       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+//       h2 {
+//         margin-top: 0;
+//       }
+
+//       .offer-list {
+//         display: grid;
+//         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//         gap: 20px;
+
+//         .offer-item {
+//           background-color: #F7F7F7;
+//           padding: 15px;
+//           border-radius: 8px;
+//           text-align: center;
+//         }
+//       }
+//     }
+//   }
+// }

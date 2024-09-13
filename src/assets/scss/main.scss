@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap');
+@import './variable.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0
+}
+
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px;
+  min-width: 390px;
+}
+.layout {
+  display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+.main {
+    display: flex;
+      flex-direction: column;
+      flex: 1;
+}
+
+.backgraund {
+  display: flex;
+    flex-direction: column;
+    flex: 1;
+  background-color: $black;
+}
+
+.border {
+      background-color: white;
+        color: black;
+        width: 100%;
+        border-radius: 20px;
+        padding: 20px 0;
+        flex: 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+  
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  min-width: 390px;
+  
+}
+
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &__container {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    border-radius: 16px;
+    background-color: white;
+    padding: 0 16px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #57ED64;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 39px;
+  }
+
+  &__field {
+    margin-bottom: 20px;
+
+    &-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 18px;
+      margin-bottom: 4px;
+      color: #595B58;
+    }
+
+    &-input {
+      display: block;
+      width: 100%;
+      padding: 12px 20px 12px 20px;
+      border-radius: 8px;
+      background-color: #F7F8F5;
+    }
+  }
+
+  &__button {
+    padding: 14px 71px;
+    border-radius: 38px;
+    display: inline-flex;
+    background-color: #121311;
+    line-height: 21px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+
+  }
+
+  &__reset {
+    color: #121311;
+    line-height: 21px;
+
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+    margin: 30px 0 40px 0 ;
+  }
+  .divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .divider__line {
+    flex-grow: 1;
+    border: 0;
+    border-top: 1px solid #C3C5C0;
+    margin: 0 10px;
+  }
+
+  .divider__text {
+    line-height: 21px;
+    white-space: nowrap;
+    color: #595B58;
+
+  }
+  .social-login {
+    display: grid;
+    gap: 20px; /* Space between buttons */
+   grid-template-columns: 1fr 1fr;
+  }
+
+  .social-login__button {
+    display: flex;
+    align-items: center;
+    padding: 11px 45px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .social-login__button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .social-login__button.google {
+    color: #444;
+    border-color: #ddd;
+  }
+
+  .social-login__button.google:hover {
+    background-color: #f7f7f7;
+  }
+
+  .social-login__button.facebook {
+    background-color: #1877F2;
+    color: white;
+    border: none;
+    line-height: 21px;
+  }
+
+  .social-login__button.facebook:hover {
+    background-color: #155dbb;
+  }
+}
+
+button {
+  // Обнуление стилей
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  // Стили по умолчанию
+  background-color: transparent;
+  color: #000;
+  transition: all 0.3s ease; // Плавный переход
+}
+
+.coin {
+  background-image: url('../img/coin.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 40px;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  &-smal {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+
+
+
+
+.registration {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  border: 1px solid $black;
+}
+
+
+@media (min-width: 768px) {
+  body {
+    margin-left: 64px;
+  }
+
+}
+
+@media (min-width: 992px) {
+  body {
+    margin-left: 213px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    margin-left: 240px;
+  }
+}
+
+

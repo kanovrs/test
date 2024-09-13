@@ -1,0 +1,192 @@
+@import "../../assets/scss/variable.scss";
+
+.sidebar {
+        background-color: $black;
+        padding: 25px 30px 32px;
+        position: fixed;
+        left: 0%;
+        top: 0px;
+        height: 100dvh;
+        width: 90dvw;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        color: #fff;
+        transform: translateX(-100%);
+        
+        z-index: 1000;
+        &--open {
+            transition: transform 0.3s ease;
+                transform: translateX(0);
+            }
+        & nav {
+            flex: 1;
+        }
+        &__logo {
+                color: $green-light;
+                font-weight: 600;
+                font-size: 20px;
+                margin-bottom: 25px;
+                display: flex;
+                line-height: 30px;
+                justify-content: space-between;
+
+            }
+        &__close {
+            position: relative;
+            width: 32px;
+            height: 32px;
+            &::after,
+            &::before {
+                content: "";
+                width: 16px;
+                height: 1px;
+                background-color: $white;
+                position: absolute;
+                top: 16px;
+                left: 8px;
+            }
+            &::after {
+                transform: rotate(45deg);
+            }
+            &::before {
+                transform: rotate(-45deg);
+            }
+        }
+           &__menu {
+               &-link {
+                   display: flex;
+                   align-items: center;
+                   gap: 16px;
+                   padding: 15px 30px;
+                                    stroke: $green-light;
+               }
+
+               
+           }
+           & .footer__social {
+            margin-top: auto;
+           }
+}
+
+
+
+
+@media (min-width: 768px) {
+   .sidebar {
+    transition: none;
+    transform: translateX(0);
+    width: 64px;
+    padding: 19px 10px;
+    &__logo {
+            font-size: 14px;
+            margin-bottom: 29px;
+            line-height: 21px;
+            text-align: center;
+            &-txt {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &__close {
+            display: none;
+        }
+                &__menu {
+                    &-link {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        padding: 15px 10px;
+                        font-size: 0;
+                        line-height: 0;
+                    }
+        
+                    &-icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 24px;
+                        height: 24px;
+                        stroke: $green-light;
+                    }
+        
+                }
+                & .footer__social {
+                    display: none;
+                }
+   }
+
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+            width: 213px;
+            padding: 25px 0px;
+    
+            &__logo {
+                font-size: 20px;
+                margin-bottom: 35px;
+                line-height: 30px;
+                justify-content: center;
+    
+                &-txt {
+                    flex-direction: row;
+                }
+            }
+    
+            &__menu {
+                &-link {
+                    display: flex;
+                    align-items: center;
+                    padding: 15px 30px;
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+    
+                &-icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 24px;
+                    height: 24px;
+                }
+    
+            }
+    
+            & .footer__social {
+                display: flex;
+            }
+        }
+}
+
+@media (min-width: 1200px) {
+    .sidebar {
+            width: 213px;
+        }
+}
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 64px;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        width: 213px;
+
+    }
+}
+
+@media (min-width: 1200px) {
+    .sidebar {
+        width: 240px;
+    }
+}

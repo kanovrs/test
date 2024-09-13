@@ -1,0 +1,53 @@
+@import "../assets/scss/variable.scss";
+
+.offers {
+    &__block {
+        margin-top: 20px;
+        border: 1px solid  $gray-light ;
+        border-radius: 16px;
+
+        padding: 18px 10px;
+    }
+    
+    &__pagination {
+        margin-top: 10px;
+        &-quantity {
+                padding: 10px;
+                padding-right: 40px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                appearance: none;
+                background-color: #fff;
+                stroke: $gray-light;
+            }
+    }
+    &__btn-txt {
+        display: none;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .offers {
+            
+            &__pagination {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                & .pagination {
+                    margin-top: 0;
+                }
+            }
+    
+        }
+}
+
+
+@media (min-width: 1200px) {
+    .offers {
+        &__btn-txt {
+                display: block;
+            }
+    }
+}
