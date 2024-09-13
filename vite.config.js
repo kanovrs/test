@@ -7,7 +7,7 @@ export default defineConfig({
     loader: "jsx", // Убедитесь, что добавлена эта строка
     include: /src\/.*\.jsx?$/, // Обрабатывайте все файлы с расширением .js и .jsx
   },
-  base: '/test/',
+  base: '/https://kanovrs.github.io/test//',
   server: {
     
   },
