@@ -7,13 +7,8 @@ export default defineConfig({
     loader: "jsx", // Убедитесь, что добавлена эта строка
     include: /src\/.*\.jsx?$/, // Обрабатывайте все файлы с расширением .js и .jsx
   },
+  base: '/test/',
   server: {
-    proxy: {
-      "/api": {
-        target: "http://185.237.219.114:3000",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
-      },
-    },
+    
   },
 });
